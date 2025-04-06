@@ -6,6 +6,7 @@ services:
     container_name: rwebley-website
     volumes:
       - .:/app
+      - /home/application_files/newsite/settings.ini:/app/config/settings.ini
     ports:
       - "9000:8000"
 

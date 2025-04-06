@@ -16,6 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from base import api as base_api
+
+from ninja import NinjaAPI
 
 urlpatterns = [
     path('admin/', admin.site.urls),
