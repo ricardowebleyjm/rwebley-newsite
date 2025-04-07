@@ -20,7 +20,16 @@ from base import api as base_api
 
 from ninja import NinjaAPI
 
+api: NinjaAPI = NinjaAPI(
+    title="Rwebley API",
+    version="1.0.0",
+    description="API for Rwebley",
+)
+
+api.add_router("/base/", base_api.router)
+
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    #path('admin/', admin.site.urls),
     path('', include('base.urls')),
+    path('api/', api.urls),
 ]

@@ -2,3 +2,4 @@ django
 django-compressor
 django-ninja
 gunicorn
+pydantic[email]
